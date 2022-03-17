@@ -1,3 +1,5 @@
+package sort;
+
 public class SortingHelper {
     private SortingHelper(){}
 
@@ -12,10 +14,10 @@ public class SortingHelper {
 
     public static <E extends Comparable<E>> void sortTest(String sortname, E[] arr){
         long startTime=System.nanoTime();
-        if(sortname.equals("SelectionSort")){
+        if(sortname.equals("sort.SelectionSort")){
             SelectionSort.sort(arr);
         }
-        if(sortname.equals("InsertionSort")){
+        if(sortname.equals("sort.InsertionSort")){
             InsertionSort.sort(arr);
         }
         if(sortname.equals("InsertionSort2")){
@@ -29,7 +31,7 @@ public class SortingHelper {
 //            System.out.print(e+" ");
 //        }
         if(!SortingHelper.isSorted(arr)){
-            throw new RuntimeException("SelectionSort failed");
+            throw new RuntimeException("sort.SelectionSort failed");
         }
         System.out.println(String.format("%s , n = %d : %f s",sortname,arr.length,time));
     }

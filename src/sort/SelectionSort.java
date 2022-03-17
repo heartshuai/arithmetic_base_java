@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package sort;
 
 public class SelectionSort {
     private SelectionSort(){}
@@ -24,39 +24,39 @@ public class SelectionSort {
     }
 //    public static void main(String[] args){
 //        Integer[] arr={1,4,2,3,6,5};
-//        SelectionSort.sort(arr);
+//        sort.SelectionSort.sort(arr);
 //        for(int e:arr){
 //            System.out.print(e+" ");
 //        }
 //        System.out.println();
 //
-//        Student[] students ={
-//                new Student("Alice",98),
-//                new Student("Bobo",100),
-//                new Student("Charles",66),
+//        sort.Student[] students ={
+//                new sort.Student("Alice",98),
+//                new sort.Student("Bobo",100),
+//                new sort.Student("Charles",66),
 //        };
-//        SelectionSort.sort(students);
-//        for(Student student:students){
+//        sort.SelectionSort.sort(students);
+//        for(sort.Student student:students){
 //            System.out.print(student + " ");
 //        }
 //    }
     public static void main(String[] args){
         int[] dataSize={10000,100000};
         for(int n: dataSize){
-            Integer[] arr=ArrayGenerator.generateRandomArray(n,n);
-            SortingHelper.sortTest("SelectionSort",arr);
+            Integer[] arr= ArrayGenerator.generateRandomArray(n,n);
+            SortingHelper.sortTest("sort.SelectionSort",arr);
         }
 
 
 //        long startTime=System.nanoTime();
-//        SelectionSort.sort(arr);
+//        sort.SelectionSort.sort(arr);
 //        long endTime=System.nanoTime();
 //        double time=(endTime-startTime) /100000000.0;
 ////        for(int e:arr){
 ////            System.out.print(e+" ");
 ////        }
-//        if(!SortingHelper.isSorted(arr)){
-//            throw new RuntimeException("SelectionSort failed");
+//        if(!sort.SortingHelper.isSorted(arr)){
+//            throw new RuntimeException("sort.SelectionSort failed");
 //        }
 //        System.out.println(time);
     }

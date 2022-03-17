@@ -1,3 +1,5 @@
+package sort;
+
 import java.util.Arrays;
 
 public class InsertionSort {
@@ -46,18 +48,18 @@ public class InsertionSort {
         int[] dataSize={10000,100000};
         for(int n: dataSize){
             System.out.println("Random Array :");
-            Integer[] arr=ArrayGenerator.generateRandomArray(n,n);
+            Integer[] arr= ArrayGenerator.generateRandomArray(n,n);
             Integer[] arr2= Arrays.copyOf(arr,arr.length);
-            SortingHelper.sortTest("InsertionSort",arr);
-            SortingHelper.sortTest("SelectionSort",arr2);
+            SortingHelper.sortTest("sort.InsertionSort",arr);
+            SortingHelper.sortTest("sort.SelectionSort",arr2);
 
             System.out.println();
             System.out.println("Orded Array : ");
 
             arr=ArrayGenerator.generateOrderedArray(n);
             arr2=Arrays.copyOf(arr,arr.length);
-            SortingHelper.sortTest("InsertionSort",arr);
-            SortingHelper.sortTest("SelectionSort",arr2);
+            SortingHelper.sortTest("sort.InsertionSort",arr);
+            SortingHelper.sortTest("sort.SelectionSort",arr2);
             System.out.println();
 
         }
